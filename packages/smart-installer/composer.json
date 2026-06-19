@@ -1,0 +1,25 @@
+{
+    "name": "app/installer",
+    "description": "Standalone Laravel Installer Wizard — requirements check, database setup, migrations & seeding.",
+    "type": "library",
+    "keywords": ["laravel", "installer", "wizard", "setup"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Smart\\Installer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Smart\\Installer\\Providers\\InstallerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
