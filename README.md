@@ -437,10 +437,16 @@ packages/
 ---
 
 <p align="center">
-  💬 If you encounter any issues, please open an <strong>Issue</strong> and we'll help you solve it.<br/>
-  ⭐ If you like the project, don't forget to give it a <strong>Star</strong>!
+  💬 If you encounter any issues, feel free to open an <strong>Issue</strong> or contact me directly via WhatsApp.<br/>
+  🚀 Contributions, suggestions, and feedback are always welcome.<br/>
+  ⭐ If this project helps you, please consider giving it a <strong>Star</strong> to support its development.
 </p>
 
 <p align="center">
-  Made with ❤️ for the Laravel community
+  Made with ❤️ by <strong>Eng. Abdelrhman Rabea</strong><br/>
+  Laravel Developer • Open Source Enthusiast
+  <br/><br/>
+  📱 <a href="https://wa.me/201068694941" target="_blank">
+    WhatsApp: +20 106 869 4941
+  </a>
 </p>
