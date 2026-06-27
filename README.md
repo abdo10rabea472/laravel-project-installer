@@ -1,87 +1,121 @@
-<div dir="rtl">
+<p align="center">
+  <img src="https://laravel.com/img/logomark.min.svg" alt="Smart Installer Logo" width="120" />
+</p>
 
-# 📦 Smart Installer — معالج تثبيت Laravel (Package)
+<h1 align="center">📦 Smart Installer</h1>
+<h3 align="center">⚙️ Laravel Installation Wizard (Package)</h3>
 
 <p align="center">
-  <strong>حل متكامل لتثبيت مشاريع Laravel بخطوات بسيطة عبر الويب أو سطر الأوامر</strong>
+  <strong>A complete solution for installing Laravel projects in simple steps via web or command line.</strong>
 </p>
 
 <p align="center">
-  <a href="#-نظرة-عامة">نظرة عامة</a> •
-  <a href="#%EF%B8%8F-المتطلبات">المتطلبات</a> •
-  <a href="#-التثبيت">التثبيت</a> •
-  <a href="#-التحديث">التحديث</a> •
-  <a href="#%EF%B8%8F-إلغاء-التثبيت">إلغاء التثبيت</a> •
-  <a href="#-معالج-الويب-web-wizard">معالج الويب</a> •
-  <a href="#%EF%B8%8F-أوامر-artisan">أوامر Artisan</a>
+  <img src="https://img.shields.io/badge/PHP-%3E=8.2-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+" />
+  <img src="https://img.shields.io/badge/Laravel-10%20%7C%2011%20%7C%2012%20%7C%2013-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel 10-13" />
+  <img src="https://img.shields.io/badge/Composer-%3E=2.0-885630?style=for-the-badge&logo=composer&logoColor=white" alt="Composer 2+" />
+  <img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="MIT License" />
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-0ea5e9?style=for-the-badge" alt="Platform" />
+  <img src="https://img.shields.io/badge/Language-EN%20%7C%20AR-7c3aed?style=for-the-badge" alt="EN / AR" />
+</p>
+
+<p align="center">
+  <a href="#-overview">📖 Overview</a> •
+  <a href="#%EF%B8%8F-requirements">⚙️ Requirements</a> •
+  <a href="#-installation">🚀 Installation</a> •
+  <a href="#-cache-commands">🧹 Cache Commands</a> •
+  <a href="#-update">🔄 Update</a> •
+  <a href="#%EF%B8%8F-uninstall">🗑️ Uninstall</a> •
+  <a href="#-web-wizard">🪄 Web Wizard</a> •
+  <a href="#%EF%B8%8F-artisan-commands">🛠️ Artisan</a>
 </p>
 
 ---
 
-## 📖 نظرة عامة
+## 📖 Overview
 
-**Smart Installer** هو _package_ مخصّص لمشاريع **Laravel 10 / 11 / 12 / 13**، يقدّم تجربة تثبيت احترافية وسهلة من خلال المتصفح أو سطر الأوامر.
+**Smart Installer** is a package designed for **Laravel 10 / 11 / 12 / 13** projects that provides a professional and easy installation experience through the browser or the command line.
 
-### ✨ المميزات
+### ✨ Features
 
-- **فحص المتطلبات** — يتحقق تلقائيًا من إصدار PHP، والإضافات المطلوبة، وصلاحيات المجلدات.
-- **إعداد قاعدة البيانات** — يختبر الاتصال، يكتب الإعدادات في `.env`، ويُولِّد `APP_KEY`.
-- **تثبيت تلقائي** — يُشغّل أوامر Composer و Migration و Seeder و Cache بالتسلسل.
-- **قفل ذكي** — بعد اكتمال التثبيت يُقفل المعالج بشكل دائم (404) لحماية التطبيق.
-- **تجربة عربية** — دعم كامل للغة العربية بواجهة خفيفة وسهلة الاستخدام.
-- **CLI كامل** — يمكنك التثبيت والتحديث والإزالة عبر سطر الأوامر أو ملفات `.bat` جاهزة.
-
----
-
-## ⚙️ المتطلبات
-
-| المتطلب    | الحد الأدنى                                                                                                  |
-| ---------- | ------------------------------------------------------------------------------------------------------------ |
-| PHP        | 8.2+                                                                                                         |
-| Laravel    | 10 / 11 / 12 / 13                                                                                            |
-| إضافات PHP | `openssl`, `pdo`, `pdo_mysql`, `mbstring`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`, `curl`, `fileinfo` |
-| الصلاحيات  | يجب أن يكون مجلد `storage/` و `bootstrap/cache/` قابلًا للكتابة                                              |
+| | Feature | Description |
+| :-: | ------- | ----------- |
+| ✅ | **Requirements Check** | Automatically verifies PHP version, required extensions, and folder permissions. |
+| 🗄️ | **Database Setup** | Tests the database connection, writes settings to `.env`, and generates `APP_KEY`. |
+| ⚡ | **Automatic Installation** | Runs Composer, Migration, Seeder, and Cache commands sequentially. |
+| 🔒 | **Smart Lock** | After installation completes, the wizard is locked permanently (404). |
+| 🌍 | **Bilingual** | Full Arabic & English language support with a light interface. |
+| 💻 | **Full CLI** | Install, update, and remove via command line or ready-made `.bat` files. |
 
 ---
 
-## 🚀 التثبيت
+## ⚙️ Requirements
 
-### الطريقة 1: باستخدام `install.bat` (الأسهل — Windows)
+<p align="center">
+  <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=flat-square&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/Laravel-10/11/12/13-FF2D20?style=flat-square&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-5.7+-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Composer-2.x-885630?style=flat-square&logo=composer&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenSSL-✓-721412?style=flat-square&logo=openssl&logoColor=white" />
+  <img src="https://img.shields.io/badge/PDO-✓-4479A1?style=flat-square" />
+  <img src="https://img.shields.io/badge/Mbstring-✓-8892BF?style=flat-square" />
+  <img src="https://img.shields.io/badge/Tokenizer-✓-8892BF?style=flat-square" />
+  <img src="https://img.shields.io/badge/XML-✓-005A9C?style=flat-square&logo=xml&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ctype-✓-8892BF?style=flat-square" />
+  <img src="https://img.shields.io/badge/JSON-✓-000000?style=flat-square&logo=json&logoColor=white" />
+  <img src="https://img.shields.io/badge/BCMath-✓-8892BF?style=flat-square" />
+  <img src="https://img.shields.io/badge/cURL-✓-073551?style=flat-square&logo=curl&logoColor=white" />
+  <img src="https://img.shields.io/badge/Fileinfo-✓-8892BF?style=flat-square" />
+</p>
 
-1. انسخ مجلد `packages/smart-installer` داخل مشروع Laravel الخاص بك.
-2. افتح ملف `packages/install.bat` وشغّله بالنقر المزدوج.
-3. سيتم تنفيذ كل شيء تلقائيًا:
-   - إضافة الـ Repository في `composer.json`
-   - تثبيت الـ package باسم `app/installer`
-   - نشر ملفات الإعدادات والـ Views
-   - تنظيف الـ Cache
-4. افتح المتصفح على:
+| Requirement | Minimum |
+| ----------- | ------- |
+| 🐘 **PHP** | 8.2+ |
+| 🎯 **Laravel** | 10 / 11 / 12 / 13 |
+| 🎼 **Composer** | 2.x |
+| 🗄️ **Database** | MySQL 5.7+ / MariaDB 10.3+ / PostgreSQL 10+ / SQLite 3 |
+| 🧩 **PHP Extensions** | `openssl`, `pdo`, `pdo_mysql`, `mbstring`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`, `curl`, `fileinfo` |
+| 🔐 **Permissions** | `storage/` and `bootstrap/cache/` folders must be writable |
+
+---
+
+## 🚀 Installation
+
+### 🪟 Method 1: Using `install.bat` (Easiest — Windows)
+
+1. Copy the `packages/smart-installer` folder into your Laravel project.
+2. Open `packages/install.bat` and run it by double-clicking.
+3. Everything will be executed automatically:
+   - ➕ Add the repository in `composer.json`
+   - 📦 Install the `app/installer` package
+   - 📤 Publish configuration and view files
+   - 🧹 Clear cache
+4. Open your browser at:
 
    ```
    http://127.0.0.1:8000/install
    ```
 
-### الطريقة 2: يدويًا (Linux / macOS / Windows)
+### 🐧 Method 2: Manual (Linux / macOS / Windows)
 
 ```bash
-# 1. إضافة الـ repository إلى composer.json
+# 1. Add repository to composer.json
 composer config repositories.smart-installer path "packages/smart-installer"
 
-# 2. تثبيت الـ package
+# 2. Install the package
 composer require app/installer:@dev
 
-# 3. نشر الإعدادات والـ views
+# 3. Publish configuration and views
 php artisan vendor:publish --tag=installer-config --force
 php artisan vendor:publish --tag=installer-views --force
 
-# 4. تشغيل معالج الويب
+# 4. Run the web wizard
 php artisan serve
-# ثم افتح: http://127.0.0.1:8000/install
+# Then open: http://127.0.0.1:8000/install
 ```
 
-### إعداد ملف `.env.example`
+### 📝 Setting up `.env.example`
 
-انسخ السطور التالية من `packages/smart-installer/stubs/env.example.stub` إلى ملف `.env.example` الخاص بمشروعك:
+Copy the following lines from `packages/smart-installer/stubs/env.example.stub` to your project's `.env.example` file:
 
 ```env
 PRODUCT_NAME="My Application"
@@ -91,200 +125,269 @@ PRODUCT_SUPPORT_URL="https://support.example.com"
 SESSION_DRIVER=file
 ```
 
-> **ملاحظة:** لا تقم برفع ملف `.env` مع مشروعك — المعالج ينشئه تلقائيًا أثناء التثبيت.
+> 💡 **Note:** Do not commit `.env` with your project — the wizard creates it automatically during installation.
 
 ---
 
-## 🪄 معالج الويب (Web Wizard)
+## 🧹 Cache Commands
 
-بعد فتح الرابط `http://127.0.0.1:8000/install` ستمر بالخطوات التالية:
+Run these commands **after installation** (or any time you change configs, routes, views, or env values).
+They are also useful when debugging or after updating the package.
 
-```text
-┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐
-│   ترحيب    │ → │  المتطلبات  │ → │ قاعدة بيانات│ → │   تثبيت    │ → │   اكتمال   │
-└─────────────┘   └─────────────┘   └─────────────┘   └─────────────┘   └─────────────┘
-```
-
-### الخطوة 1: الترحيب
-
-يعرض معلومات المنتج، إصدار PHP، وبيانات السيرفر.
-
-### الخطوة 2: المتطلبات
-
-يتم التحقق من:
-
-- إصدار PHP (8.2+)
-- الإضافات المطلوبة (`openssl`, `pdo`, `mbstring`, …)
-- صلاحيات الكتابة على `storage/` و `bootstrap/cache/`
-
-### الخطوة 3: قاعدة البيانات
-
-- إدخال بيانات الاتصال (اسم القاعدة، المستخدم، كلمة المرور)
-- اختبار الاتصال قبل الانتقال للخطوة التالية
-- توليد `APP_KEY` تلقائيًا إذا لم يكن موجودًا
-- كتابة الإعدادات في ملف `.env`
-
-### الخطوة 4: التثبيت
-
-يتم تنفيذ الأوامر التالية بالتسلسل:
-
-| الأمر                                             | الوصف                  |
-| ------------------------------------------------- | ---------------------- |
-| `composer install --no-dev --optimize-autoloader` | تثبيت الاعتمادات       |
-| `composer dump-autoload --optimize`               | تحسين الـ Autoloader   |
-| `php artisan migrate --force`                     | تشغيل الـ Migrations   |
-| `php artisan db:seed --force`                     | إدخال البيانات الأولية |
-| `php artisan storage:link`                        | ربط مجلد التخزين       |
-| `php artisan optimize:clear`                      | تنظيف الكاش القديم     |
-| `php artisan config:cache`                        | تخزين الإعدادات        |
-| `php artisan route:cache`                         | تخزين المسارات         |
-| `php artisan view:cache`                          | تخزين الـ Views        |
-| Lock File                                         | كتابة ملف القفل        |
-
-> في حال فشل أي خطوة ستظهر رسالة خطأ مع زر **إعادة المحاولة**.
-
-### الخطوة 5: الاكتمال
-
-- يُقفل المعالج بشكل دائم (404)
-- يتم توجيهك تلقائيًا إلى التطبيق
-
----
-
-## 🛠️ أوامر Artisan
-
-### تثبيت كامل عبر CLI
+### 🔥 Clear All Caches (Recommended)
 
 ```bash
-php artisan installer:run
-```
-
-#### خيارات إضافية
-
-```bash
-# تخطّي خطوات Composer (إذا كانت الاعتمادات مثبتة بالفعل)
-php artisan installer:run --skip-composer
-
-# تخطّي الـ Seeding
-php artisan installer:run --skip-seed
-
-# إعادة التثبيت حتى لو كان مثبتًا بالفعل
-php artisan installer:run --force
-```
-
-### إعادة تعيين التثبيت (إزالة القفل)
-
-```bash
-# يحذف ملفات القفل لإعادة تشغيل المعالج
-php artisan installer:reset
-
-# إعادة تعيين بدون تأكيد
-php artisan installer:reset --force
-```
-
-### نشر الإعدادات والـ Views
-
-```bash
-php artisan vendorPrefix:setup
-
-# أو يدويًا:
-php artisan vendor:publish --tag=installer-config --force
-php artisan vendor:publish --tag=installer-views --force
-```
-
----
-
-## 🔄 التحديث
-
-### باستخدام `update.bat` (Windows)
-
-```bash
-packages/update.bat
-```
-
-### يدويًا (لكل الأنظمة)
-
-```bash
-# 1. تحديث الـ package
-composer update app/installer --with-all-dependencies
-
-# 2. إعادة نشر الإعدادات والـ views
-php artisan vendor:publish --tag=installer-config --force
-php artisan vendor:publish --tag=installer-views --force
-
-# 3. تنظيف الكاش
+# Clears: config, route, view, application & compiled cache in one go
 php artisan optimize:clear
 ```
 
----
-
-## 🗑️ إلغاء التثبيت
-
-> **تحذير:** إلغاء التثبيت يحذف الـ package وجميع ملفاته وإعداداته بشكل دائم.
-
-### باستخدام `uninstall.bat` (Windows)
+### 🧽 Clear Individually
 
 ```bash
-packages/uninstall.bat
+php artisan cache:clear        # 🗃️  Application cache
+php artisan config:clear       # ⚙️  Config cache
+php artisan route:clear        # 🛣️  Route cache
+php artisan view:clear         # 👀  Compiled Blade views
+php artisan event:clear        # 📡  Cached events & listeners
+php artisan queue:clear        # 📬  Queue jobs (default connection)
+php artisan schedule:clear-cache  # 🕒  Scheduled tasks mutex cache
 ```
 
-سيُطلب منك كتابة **YES** للتأكيد، ثم يتم تنفيذ:
-
-- إزالة الـ package من Composer
-- حذف الـ repository من `composer.json`
-- حذف ملف الإعدادات `config/installer.php`
-- حذف الـ views المنشورة `resources/views/vendor/installer/`
-- حذف ملفات القفل
-- تنظيف الكاش
-
-### يدويًا (لكل الأنظمة)
+### ⚡ Rebuild (Production Cache)
 
 ```bash
-# 1. إزالة الـ package
-composer remove app/installer
+# Rebuild all caches for production
+php artisan optimize
 
-# 2. حذف الـ repository من composer.json
-composer config --unset repositories.smart-installer
+# Or one by one:
+php artisan config:cache       # ⚙️  Cache config
+php artisan route:cache        # 🛣️  Cache routes
+php artisan view:cache         # 👀  Compile & cache views
+php artisan event:cache        # 📡  Cache events
+```
 
-# 3. حذف الملفات المنشورة
-rm -f config/installer.php
-rm -rf resources/views/vendor/installer
+### 🎼 Composer Cache
 
-# 4. حذف ملفات القفل
-rm -f storage/app/installed.lock
-rm -f storage/app/installer.lock
-rm -f storage/installed
-rm -f bootstrap/cache/installed.php
+```bash
+composer dump-autoload -o      # 🔁  Refresh autoload map
+composer clear-cache           # 🧹  Clear Composer's global cache
+```
 
-# 5. تنظيف الكاش
+### 🧨 Hard Reset (Last Resort)
+
+```bash
+# Manually wipes compiled files (use only if artisan commands fail)
+rm -rf bootstrap/cache/*.php
+rm -rf storage/framework/cache/data/*
+rm -rf storage/framework/views/*
+rm -rf storage/framework/sessions/*
+php artisan optimize:clear
+composer dump-autoload -o
+```
+
+### 🪟 Windows (CMD / PowerShell)
+
+```bat
+del /Q /S bootstrap\cache\*.php
+rmdir /S /Q storage\framework\cache\data
+rmdir /S /Q storage\framework\views
+rmdir /S /Q storage\framework\sessions
 php artisan optimize:clear
 composer dump-autoload -o
 ```
 
 ---
 
-## 🔍 التحقق من حالة التثبيت في الكود
+## 🪄 Web Wizard
+
+After opening `http://127.0.0.1:8000/install`, you will go through the following steps:
+
+```text
+┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐   ┌─────────────┐
+│  👋 Welcome │ → │ ✅ Requirements│→│ 🗄️ Database │ → │ ⚡ Install  │ → │ 🎉 Complete │
+└─────────────┘   └─────────────┘   └─────────────┘   └─────────────┘   └─────────────┘
+```
+
+### 👋 Step 1: Welcome
+
+Displays product information, PHP version, and server details.
+
+### ✅ Step 2: Requirements
+
+Checks:
+
+- PHP version (8.2+)
+- Required extensions (`openssl`, `pdo`, `mbstring`, …)
+- Write permissions on `storage/` and `bootstrap/cache/`
+
+### 🗄️ Step 3: Database
+
+- Enter connection details (database name, user, password)
+- Tests the connection before proceeding
+- Generates `APP_KEY` automatically if not present
+- Writes settings to the `.env` file
+
+### ⚡ Step 4: Install
+
+The following commands are executed sequentially:
+
+| # | Command | Description |
+| :-: | ------- | ----------- |
+| 1 | `composer install --no-dev --optimize-autoloader` | 📦 Install dependencies |
+| 2 | `composer dump-autoload --optimize` | 🔁 Optimize autoloader |
+| 3 | `php artisan migrate --force` | 🗄️ Run migrations |
+| 4 | `php artisan db:seed --force` | 🌱 Seed initial data |
+| 5 | `php artisan storage:link` | 🔗 Link storage folder |
+| 6 | `php artisan optimize:clear` | 🧹 Clear old cache |
+| 7 | `php artisan config:cache` | ⚙️ Cache config |
+| 8 | `php artisan route:cache` | 🛣️ Cache routes |
+| 9 | `php artisan view:cache` | 👀 Cache views |
+| 10 | Lock File | 🔒 Write lock file |
+
+> ⚠️ If a step fails, an error message will appear with a **Retry** button.
+
+### 🎉 Step 5: Complete
+
+- The wizard is locked permanently (404)
+- You are automatically redirected to the application
+
+---
+
+## 🛠️ Artisan Commands
+
+### ▶️ Full CLI Installation
+
+```bash
+php artisan installer:run
+```
+
+#### 🎛️ Additional Options
+
+```bash
+# Skip Composer steps (if dependencies are already installed)
+php artisan installer:run --skip-composer
+
+# Skip Seeding
+php artisan installer:run --skip-seed
+
+# Reinstall even if already installed
+php artisan installer:run --force
+```
+
+### 🔄 Reset Installation (Remove Lock)
+
+```bash
+# Removes lock files to restart the wizard
+php artisan installer:reset
+
+# Reset without confirmation
+php artisan installer:reset --force
+```
+
+### 📤 Publish Configuration and Views
+
+```bash
+php artisan vendorPrefix:setup
+
+# Or manually:
+php artisan vendor:publish --tag=installer-config --force
+php artisan vendor:publish --tag=installer-views --force
+```
+
+---
+
+## 🔄 Update
+
+### 🪟 Using `update.bat` (Windows)
+
+```bash
+packages/update.bat
+```
+
+### 🐧 Manual (All Systems)
+
+```bash
+# 1. Update the package
+composer update app/installer --with-all-dependencies
+
+# 2. Republish configuration and views
+php artisan vendor:publish --tag=installer-config --force
+php artisan vendor:publish --tag=installer-views --force
+
+# 3. Clear cache
+php artisan optimize:clear
+```
+
+---
+
+## 🗑️ Uninstall
+
+> ⚠️ **Warning:** Uninstalling removes the package and all its files and settings permanently.
+
+### 🪟 Using `uninstall.bat` (Windows)
+
+```bash
+packages/uninstall.bat
+```
+
+It will ask you to type **YES** to confirm, then it will execute:
+
+- 🧱 Remove the package from Composer
+- 🗂️ Delete the repository from `composer.json`
+- ⚙️ Delete the configuration file `config/installer.php`
+- 👀 Delete published views `resources/views/vendor/installer/`
+- 🔓 Delete lock files
+- 🧹 Clear cache
+
+### 🐧 Manual (All Systems)
+
+```bash
+# 1. Remove the package
+composer remove app/installer
+
+# 2. Remove the repository from composer.json
+composer config --unset repositories.smart-installer
+
+# 3. Delete published files
+rm -f config/installer.php
+rm -rf resources/views/vendor/installer
+
+# 4. Delete lock files
+rm -f storage/app/installed.lock
+rm -f storage/app/installer.lock
+rm -f storage/installed
+rm -f bootstrap/cache/installed.php
+
+# 5. Clear cache
+php artisan optimize:clear
+composer dump-autoload -o
+```
+
+---
+
+## 🔍 Checking Installation Status in Code
 
 ```php
 use Smart\Installer\Providers\InstallerServiceProvider;
 use Smart\Installer\Install\LockFile;
 
-// هل التطبيق مثبت؟
-$isInstalled = InstallerServiceProvider::isInstalled(); // true أو false
+// Is the app installed?
+$isInstalled = InstallerServiceProvider::isInstalled(); // true or false
 
-// قراءة بيانات ملف القفل
+// Read lock data
 $lock = LockFile::read();
 // ['domain' => '...', 'installed_at' => '...', 'php_version' => '...']
 ```
 
 ---
 
-## 🔒 الأمان
+## 🔒 Security
 
-- يُقفل المعالج تلقائيًا بعد اكتمال التثبيت (يُرجع 404).
-- يتم توليد `APP_KEY` تلقائيًا إذا لم يكن موجودًا.
-- يتم فرض `SESSION_DRIVER=file` أثناء التثبيت لتجنّب خطأ _"sessions table does not exist"_.
+- 🛡️ The wizard is automatically locked after installation completes (returns 404).
+- 🔑 `APP_KEY` is generated automatically if not present.
+- 💾 `SESSION_DRIVER=file` is enforced during installation to avoid *"sessions table does not exist"* issues.
 
-أضف الأسطر التالية إلى ملف `.gitignore`:
+Add these lines to your `.gitignore`:
 
 ```gitignore
 storage/app/installed.lock
@@ -294,43 +397,50 @@ bootstrap/cache/installed.php
 
 ---
 
-## 📁 هيكل المجلدات
+## 📁 Folder Structure
 
 ```text
 packages/
-├── smart-installer/           ← مجلد الـ package
-│   ├── config/
-│   │   └── installer.php      ← إعدادات الـ package
-│   ├── resources/
-│   │   └── views/             ← ملفات Blade
-│   ├── routes/
-│   │   └── installer.php      ← المسارات
-│   ├── src/
-│   │   ├── Console/Commands/  ← أوامر Artisan
-│   │   ├── Http/Controllers/  ← الـ Controllers
-│   │   ├── Http/Middleware/   ← الـ Middleware
-│   │   ├── Install/           ← LockFile
-│   │   ├── Providers/         ← Service Provider
-│   │   └── Services/          ← منطق التثبيت
-│   ├── stubs/
-│   │   └── env.example.stub   ← قالب .env
-│   └── composer.json
+├── 📦 smart-installer/           ← Package folder
+│   ├── ⚙️  config/
+│   │   └── installer.php         ← Package configuration
+│   ├── 🎨 resources/
+│   │   └── views/                ← Blade views
+│   ├── 🛣️  routes/
+│   │   └── installer.php         ← Routes
+│   ├── 💻 src/
+│   │   ├── Console/Commands/     ← Artisan commands
+│   │   ├── Http/Controllers/     ← Controllers
+│   │   ├── Http/Middleware/      ← Middleware
+│   │   ├── Install/              ← LockFile
+│   │   ├── Providers/            ← Service Provider
+│   │   └── Services/             ← Installation logic
+│   ├── 🧩 stubs/
+│   │   └── env.example.stub      ← .env template
+│   └── 🎼 composer.json
 │
-├── install.bat                ← تثبيت الـ package
-├── update.bat                 ← تحديث الـ package
-└── uninstall.bat              ← إزالة الـ package
+├── 🟢 install.bat                ← Install package
+├── 🔵 update.bat                 ← Update package
+└── 🔴 uninstall.bat              ← Remove package
 ```
 
 ---
 
-## 📄 الترخيص
+## 📄 License
 
-**MIT License** — استخدمه بحرية في مشاريعك التجارية والشخصية.
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="MIT License" />
+</p>
+
+**MIT License** — Use it freely in your commercial and personal projects.
 
 ---
 
 <p align="center">
-  لو واجهتك أي مشكلة، افتح <strong>Issue</strong> وهنساعدك في حلها.
+  💬 If you encounter any issues, please open an <strong>Issue</strong> and we'll help you solve it.<br/>
+  ⭐ If you like the project, don't forget to give it a <strong>Star</strong>!
 </p>
 
-</div>
+<p align="center">
+  Made with ❤️ for the Laravel community
+</p>
